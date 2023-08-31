@@ -1,6 +1,6 @@
-function findSmallestIndex<T>(array: T[]): number {
+function findSmallestIndex<T>(array: Array<T>): number {
+	let smallestElement: T = array[0];
 	let smallestIndex: number = 0;
-	let smallestElement: T = array[smallestIndex];
 
 	for (let i: number = 1; i < array.length; i++) {
 		if (array[i] < smallestElement) {
@@ -12,10 +12,12 @@ function findSmallestIndex<T>(array: T[]): number {
 	return smallestIndex;
 }
 
-function selectionSort<T>(array: T[]): T[] {
-	const sortedArray: T[] = [];
+function selectionSort<T>(array: Array<T>): Array<T> {
+	// O(n x n)
+	const sortedArray: Array<T> = [];
+	const length: number = array.length;
 
-	for (let i: number = 0; i < array.length; i++) {
+	for (let i: number = 0; i < length; i++) {
 		const smallestIndex: number = findSmallestIndex(array);
 		sortedArray.push(array.splice(smallestIndex, 1)[0]);
 	}
