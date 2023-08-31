@@ -1,4 +1,4 @@
-function binarySearch<T>(list: T[], item: T): number | null {
+function binarySearch<T>(list: Array<T>, item: T): number | null {
 	// O(log2 n)
 	let low: number = 0;
 	let high: number = list.length - 1;
@@ -17,3 +17,8 @@ function binarySearch<T>(list: T[], item: T): number | null {
 
 	return null;
 }
+
+const myList: Array<number> = [1, 3, 5, 7, 9];
+
+console.log(binarySearch(myList, 3)); // 1
+console.log(binarySearch(myList, -1)); // null
