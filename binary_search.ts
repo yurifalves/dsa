@@ -1,11 +1,11 @@
-function binarySearch<T>(list: Array<T>, item: T): number | null {
+function binarySearch(list: Array<number>, item: number): number | null {
 	// O(log2 n)
 	let low: number = 0;
 	let high: number = list.length - 1;
 
 	while (low <= high) {
 		let mid: number = Math.floor((low + high) / 2);
-		let guess: T = list[mid];
+		let guess: number = list[mid];
 		if (guess === item) {
 			return mid;
 		} else if (guess > item) {
