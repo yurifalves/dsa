@@ -21,4 +21,5 @@ function binarySearch(list: Array<number>, item: number): number | null {
 const myList: Array<number> = [1, 3, 5, 7, 9];
 
 console.log(binarySearch(myList, 3)); // 1
+console.log(binarySearch(myList, 7)); // 3
 console.log(binarySearch(myList, -1)); // null
