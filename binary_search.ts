@@ -1,5 +1,5 @@
 function binarySearch(list: Array<number>, item: number): number | null {
-	// O(log2 n)
+	// O(log n)
 	let low: number = 0;
 	let high: number = list.length - 1;
 
