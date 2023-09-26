@@ -1,5 +1,5 @@
-function findSmallestIndex<T>(array: Array<T>): number {
-	let smallestElement: T = array[0];
+function findSmallestIndex(array: Array<number>): number {
+	let smallestElement: number = array[0];
 	let smallestIndex: number = 0;
 
 	for (let i: number = 1; i < array.length; i++) {
@@ -12,9 +12,9 @@ function findSmallestIndex<T>(array: Array<T>): number {
 	return smallestIndex;
 }
 
-function selectionSort<T>(array: Array<T>): Array<T> {
+function selectionSort(array: Array<number>): Array<number> {
 	// O(n x n)
-	const sortedArray: Array<T> = [];
+	const sortedArray: Array<number> = [];
 	const length: number = array.length;
 
 	for (let i: number = 0; i < length; i++) {
