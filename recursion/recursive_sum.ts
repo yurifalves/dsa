@@ -9,9 +9,9 @@ function recursiveSum(list: Array<number>): number {
 
 console.log(recursiveSum([7, 3, 16])); // 26
 /*
-recursiveSum([7, 3, 16])
-= 7 + recursiveSum([3, 16])
-= 7 + 3 + recursiveSum([16])
-= 7 + 3 + 16 + recursiveSum([])
-= 7 + 3 + 16 + 0
+  recursiveSum([7, 3, 16])
+  = 7 + recursiveSum([3, 16])
+  = 7 + 3 + recursiveSum([16])
+  = 7 + 3 + 16 + recursiveSum([])
+  = 7 + 3 + 16 + 0
 */
