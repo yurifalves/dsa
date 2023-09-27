@@ -4,11 +4,24 @@ function quickSort(arr: Array<number>): Array<number> {
     return arr;
   }
 
-  const pivot: number = arr[0];
-  const less: Array<number> = arr.slice(1).filter((el: number): boolean => el <= pivot);
-  const greater: Array<number> = arr.slice(1).filter((el: number): boolean => el > pivot);
+  const pivotIndex: number = Math.floor(arr.length / 2); 
+  const pivot: number = arr[pivotIndex];
+  const less: Array<number> = [];
+  const greater: Array<number> = [];
 
-  return quickSort(less).concat(pivot, quickSort(greater));
+  for (let i: number = 0; i < arr.length; i++) {
+    if (i === pivotIndex) {
+      continue;
+    }
+    const el: number = arr[i];
+    if (el <= pivot) {
+      less.push(el);
+    } else {
+      greater.push(el);
+    }
+  }
+
+  return [...quickSort(less), pivot, ...quickSort(greater)];
 }
 
 console.log(quickSort([10, 5, 2, 3])); // [ 2, 3, 5, 10 ]
