@@ -5,9 +5,7 @@ function quickSort(arr: Array<number>): Array<number> {
   }
 
   const pivot: number = arr[0];
-  const less: Array<number> = arr
-    .slice(1)
-    .filter((el: number): boolean => el <= pivot);
+  const less: Array<number> = arr.slice(1).filter((el: number): boolean => el <= pivot);
   const greater: Array<number> = arr.slice(1).filter((el) => el > pivot);
 
   return quickSort(less).concat(pivot, quickSort(greater));
