@@ -4,7 +4,7 @@ function quickSort(arr: Array<number>): Array<number> {
     return arr;
   }
 
-  const pivotIndex: number = Math.floor(arr.length / 2); 
+  const pivotIndex: number = Math.floor(arr.length / 2);
   const pivot: number = arr[pivotIndex];
   const less: Array<number> = [];
   const greater: Array<number> = [];
