@@ -12,4 +12,4 @@ function quickSort(arr: Array<number>): Array<number> {
 }
 
 console.log(quickSort([10, 5, 2, 3])); // [ 2, 3, 5, 10 ]
-console.log(quickSort([11, 2, 99, 13])); // [ 2, 11, 13, 99 ]
+console.log(quickSort([11, 2, 99, 13, 9, 0])); // [ 0, 2, 9, 11, 13, 99 ]
