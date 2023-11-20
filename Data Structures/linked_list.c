@@ -12,8 +12,8 @@ void addNodeToEnd(node_t* head, int val);
 void addNodeToBeginning(node_t** head, int val);
 int removeFirstNode(node_t** head);
 int removeLastNode(node_t* head);
-int removeByIndex(node_t** head, int n);
-void removeByValue(node_t** head, int val);
+int removeNodeByIndex(node_t** head, int n);
+void removeNodeByValue(node_t** head, int val);
 void deleteList(node_t* head);
 
 int main() {
@@ -38,7 +38,7 @@ int main() {
     removeLastNode(head);
     printList(head);
     
-    removeByValue(&head, 888);
+    removeNodeByValue(&head, 888);
     printList(head);
     
     deleteList(head);
@@ -120,7 +120,7 @@ int removeLastNode(node_t* head) {
     return retval;
 }
 
-int removeByIndex(node_t** head, int n) {
+int removeNodeByIndex(node_t** head, int n) {
     int retval = -1;
     node_t* current = *head;
     node_t* tempNode = NULL;
@@ -148,7 +148,7 @@ int removeByIndex(node_t** head, int n) {
     return retval;
 }
 
-void removeByValue(node_t** head, int val) {
+void removeNodeByValue(node_t** head, int val) {
     node_t* current = *head;
     node_t* nodeToRemove;
     
