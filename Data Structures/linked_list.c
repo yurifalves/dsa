@@ -61,7 +61,7 @@ void printList(node_t* head) {
         }
         numberOfItems++;
     }
-    printf("} (%d)\n", numberOfItems);
+    printf("} (SIZE=%d)\n", numberOfItems);
 }
 
 void addNodeToEnd(node_t* head, int val) {
@@ -173,7 +173,6 @@ void deleteList(node_t* head) {
         current = next;
     }
 }
-
 
 
 
